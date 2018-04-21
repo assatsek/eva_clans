@@ -1,0 +1,20 @@
+﻿<!--шаблон для вывода созданным тем-->
+{% extends "eva_dop/base.html" %}
+
+{% block content %}
+
+	<p>Topics</p>
+
+<ul>
+  {% for topic in topics %}
+    <li>
+	  <a href="{% url 'eva_dop:topic' topic.id %}">{{ topic }}</a>
+	</li>
+  {% empty %}
+    <li>Записи ещё не добавлены</li>
+  {% endfor %}
+</ul>
+				<!--очевидная кнопка на отдельную страницу создания записи или темы-->
+	<a href="{% url 'eva_dop:new_topic' %}">Создать новую запись:</a>
+
+{% endblock content %}

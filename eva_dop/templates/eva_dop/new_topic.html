@@ -1,0 +1,12 @@
+﻿{% extends "eva_dop/base.html" %}
+
+{% block content %}
+	<p>Создание темы или записи:</p>
+	<form action="{% url 'eva_dop:new_topic' %}" method='post'>
+	  {% csrf_token %}
+	  {{ form.as_p }}
+	  <button name="submit">Создать тему/запись</button>
+	</form>
+	
+	
+{% endblock content %}

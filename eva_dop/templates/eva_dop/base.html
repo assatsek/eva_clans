@@ -1,0 +1,17 @@
+﻿<!--базовый шаблон с которого основные элементы страниц будут раскидываться на остальные-->
+{% load staticfiles %}
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'css/eva_dop.css' %}">
+
+<p>
+	<a href="{% url 'eva_dop:index' %}">Eva site</a>
+	<a href="{% url 'eva_dop:topics' %}">Записи/Темы</a>
+	<a href="{% url 'eva_dop:clans' %}">О Клане</a>
+	<a href="{% url 'eva_dop:codex' %}">Кодекс клана</a>
+	<a href="{% url 'eva_dop:members' %}">Состав клана</a>
+	<a href="{% url 'eva_dop:guide' %}">Гайды</a>
+	
+</p>
+	{% block content %}{% endblock content %}
